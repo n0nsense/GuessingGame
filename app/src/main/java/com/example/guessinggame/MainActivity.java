@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void settxtGuessHint() {
-        txtGuess.setHint("our number is : " + theNumber);
+        txtGuess.setHint(theNumber);
     }
 
     protected void initListeners(){
