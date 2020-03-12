@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         txtGuess.setText("");
         lblOutput.setText(R.string.enter_a_number_then_click_guess);
         theNumber = (int)(Math.random() * 100 + 1);
-        settxtGuessHint();
+        txtGuess.setHint(String.format("%d", theNumber));
     }
 
     public void checkGuess(){
@@ -60,15 +60,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void setLblOutput(String message, String color) {
         lblOutput.setText(message);
-        if(color.equals("Red")) {
+        if(color.equals("Red"))
             lblOutput.setTextColor(ContextCompat.getColor(this.getApplicationContext(), R.color.Red));
-        }else{
+        else
             lblOutput.setTextColor(ContextCompat.getColor(this.getApplicationContext(), R.color.Black));
-        }
-    }
-
-    public void settxtGuessHint() {
-        txtGuess.setHint(theNumber);
     }
 
     protected void initListeners(){
